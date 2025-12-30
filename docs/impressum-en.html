@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprint - Catchly</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            background-color: #f5f8fa; 
+            color: #333; 
+            padding: 2rem; 
+            max-width: 800px; 
+            margin: auto; 
+        }
+        h1, h2 { color: #1c3d5a; }
+        h1 { border-bottom: 3px solid #ff9500; padding-bottom: 0.5rem; }
+        h2 { margin-top: 2rem; font-size: 1.4rem; }
+        a { color: #ff9500; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-info { 
+            background: #fff; 
+            padding: 1.5rem; 
+            border-radius: 8px; 
+            border-left: 4px solid #1c3d5a;
+            margin: 1.5rem 0;
+        }
+        .contact-info p { margin: 0.5rem 0; }
+        footer { 
+            text-align: center; 
+            font-size: 0.9rem; 
+            margin-top: 3rem; 
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+            color: #666; 
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 1rem;
+            background: #1c3d5a;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: #2d5278;
+            text-decoration: none;
+        }
+        .lang-switcher {
+            display: inline-block;
+            margin-left: 1rem;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .lang-switcher:hover {
+            background: #5568d3;
+            text-decoration: none;
+        }
+        .translation-note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="impressum.html" class="lang-switcher">🌐 Deutsch</a>
+    </div>
+
+    <div class="translation-note">
+        ℹ️ <strong>Note:</strong> This page has been automatically translated from German. The German version ("Impressum") is legally binding.
+    </div>
+    
+    <h1>Imprint</h1>
+    
+    <p>Information according to § 5 TMG (German Telemedia Act)</p>
+
+    <div class="contact-info">
+        <h2>Responsible for Content</h2>
+        <p><strong>Dominik Amann</strong><br>
+        Propst-Kügelin-Str. 12<br>
+        88339 Bad Waldsee<br>
+        Germany</p>
+    </div>
+
+    <h2>Contact</h2>
+    <p>Email: <span id="email-contact"></span></p>
+    <p>GitHub Discussions: <a href="https://github.com/dominikamann/catchly.app/discussions" target="_blank">https://github.com/dominikamann/catchly.app/discussions</a></p>
+
+    <h2>Liability for Content</h2>
+    <p>As a service provider, we are responsible for our own content on these pages according to § 7 para. 1 TMG and general laws. However, according to §§ 8 to 10 TMG, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
+    <p>Obligations to remove or block the use of information according to general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific legal violation. Upon becoming aware of such legal violations, we will remove this content immediately.</p>
+
+    <h2>Liability for Links</h2>
+    <p>Our offer contains links to external third-party websites over whose content we have no influence. Therefore, we cannot accept any liability for this third-party content. The respective provider or operator of the linked pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking.</p>
+    <p>However, permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of a legal violation. Upon becoming aware of legal violations, we will remove such links immediately.</p>
+
+    <h2>Copyright</h2>
+    <p>The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use.</p>
+    <p>Insofar as the content on this page was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.</p>
+
+    <h2>Dispute Resolution</h2>
+    <p>The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>.<br>
+    You can find our email address in the imprint above.</p>
+    <p>We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+
+    <footer>
+        <p><a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a></p>
+        &copy; 2025 Catchly – All rights reserved.
+    </footer>
+
+    <script>
+        // Anti-spam email protection
+        (function() {
+            var user = 'nape.texture_59';
+            var domain = 'icloud.com';
+            var element = document.getElementById('email-contact');
+            element.innerHTML = '<a href="mailto:' + user + '@' + domain + '">' + user + '@' + domain + '</a>';
+        })();
+    </script>
+</body>
+</html>

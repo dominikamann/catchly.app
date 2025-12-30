@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catchly - Your Personal Fishing Diary</title>
+    <title>Catchly - Dein persönliches Angeltagebuch</title>
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
@@ -18,6 +18,23 @@
             padding: 3rem 2rem; 
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .lang-switcher {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .lang-switcher a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .lang-switcher a:hover {
+            text-decoration: underline;
         }
         .header-icon {
             width: 80px;
@@ -130,84 +147,55 @@
             border-radius: 6px;
             border-left: 4px solid #ffc107;
         }
-        .lang-switcher {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        .lang-switcher a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .lang-switcher a:hover {
-            text-decoration: underline;
-        }
-        .translation-note {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            color: #1565c0;
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="lang-switcher">
-            🌐 <a href="index-de.html">Deutsch</a>
+            🌐 <a href="index.html">English</a>
         </div>
         <img src="icon.png" alt="Catchly Icon" class="header-icon">
         <h1>🎣 Catchly</h1>
-        <p>Your Personal Fishing Diary</p>
-        <p class="tagline">Your moments. Your spots. Your bites.</p>
+        <p>Dein persönliches Angeltagebuch</p>
+        <p class="tagline">Deine Momente. Deine Spots. Deine Bisse.</p>
     </header>
     <main>
-        <div class="translation-note">
-            ℹ️ <strong>Note:</strong> This page has been automatically translated from German. Some terms may not be perfectly accurate.
-        </div>
         <section class="intro">
-            <h2>About Catchly</h2>
-            <p>Catchly is your digital companion for every fishing trip. Whether you're a casual angler or a passionate fishing enthusiast, Catchly helps you capture every adventure and fish smarter through experience.</p>
+            <h2>Über Catchly</h2>
+            <p>Catchly ist dein digitaler Begleiter für jeden Angelausflug. Ob Gelegenheitsangler oder leidenschaftlicher Angelenthusiast – Catchly hilft dir, jedes Abenteuer festzuhalten und durch Erfahrung intelligenter zu angeln.</p>
             <div class="download-badge">
                 <a href="https://apps.apple.com/app/catchly/id6739357629" target="_blank">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Im App Store laden">
                 </a>
             </div>
         </section>
 
         <section>
-            <h2>✨ Features</h2>
+            <h2>✨ Funktionen</h2>
             <div class="features">
                 <div class="feature-card">
-                    <h3>🎣 Log Your Catches</h3>
-                    <p>Record every fish with photos, species, size, weight, and location</p>
+                    <h3>🎣 Fänge dokumentieren</h3>
+                    <p>Erfasse jeden Fisch mit Fotos, Art, Größe, Gewicht und Standort</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🗺️ Remember Your Spots</h3>
-                    <p>Save your favorite fishing locations and build your personal fishing map</p>
+                    <h3>🗺️ Angelplätze merken</h3>
+                    <p>Speichere deine Lieblings-Angelspots und erstelle deine persönliche Angelkarte</p>
                 </div>
                 <div class="feature-card">
-                    <h3>📊 Track Your Progress</h3>
-                    <p>Analyze your success and learn from every adventure</p>
+                    <h3>📊 Fortschritt verfolgen</h3>
+                    <p>Analysiere deinen Erfolg und lerne aus jedem Abenteuer</p>
                 </div>
                 <div class="feature-card">
-                    <h3>📅 Organize Adventures</h3>
-                    <p>Document complete fishing trips with all the details that matter</p>
+                    <h3>📅 Abenteuer organisieren</h3>
+                    <p>Dokumentiere komplette Angeltouren mit allen wichtigen Details</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🔒 Privacy First</h3>
-                    <p>All your data stays on your device – no cloud sync, no data sharing</p>
+                    <h3>🔒 Datenschutz zuerst</h3>
+                    <p>Alle deine Daten bleiben auf deinem Gerät – keine Cloud-Synchronisation, keine Datenweitergabe</p>
                 </div>
                 <div class="feature-card">
-                    <h3>📴 Offline Ready</h3>
-                    <p>Completely offline – no internet required</p>
+                    <h3>📴 Offline-fähig</h3>
+                    <p>Komplett offline nutzbar – kein Internet erforderlich</p>
                 </div>
             </div>
         </section>
@@ -215,43 +203,43 @@
         <section class="faq">
             <h2>❓ FAQ</h2>
             <div class="faq-item">
-                <p><strong>How do I log a catch?</strong><br>
-                Go to "Adventures", select a day, and tap "New Catch". You can add photos, species, size, weight, and location details.</p>
+                <p><strong>Wie erfasse ich einen Fang?</strong><br>
+                Gehe zu "Abenteuer", wähle einen Tag und tippe auf "Neuer Fang". Du kannst Fotos, Art, Größe, Gewicht und Standortdetails hinzufügen.</p>
             </div>
             <div class="faq-item">
-                <p><strong>How do I delete an adventure?</strong><br>
-                Select the adventure from your list, then tap "Delete" to remove it permanently.</p>
+                <p><strong>Wie lösche ich ein Abenteuer?</strong><br>
+                Wähle das Abenteuer aus deiner Liste und tippe dann auf "Löschen", um es dauerhaft zu entfernen.</p>
             </div>
             <div class="faq-item">
-                <p><strong>Is my data safe?</strong><br>
-                Yes! All your data stays exclusively on your device. Catchly does not collect, store, or share any personal information.</p>
+                <p><strong>Sind meine Daten sicher?</strong><br>
+                Ja! Alle deine Daten bleiben ausschließlich auf deinem Gerät. Catchly sammelt, speichert oder teilt keine persönlichen Informationen.</p>
             </div>
             <div class="faq-item">
-                <p><strong>Does Catchly work offline?</strong><br>
-                Absolutely! Catchly is designed to work completely offline, perfect for remote fishing locations.</p>
+                <p><strong>Funktioniert Catchly offline?</strong><br>
+                Absolut! Catchly ist komplett offline nutzbar, perfekt für abgelegene Angelplätze.</p>
             </div>
         </section>
 
         <section class="contact">
-            <h2>💬 Contact & Support</h2>
-            <p>If you have any questions or need assistance, feel free to reach out here: <a href="https://github.com/dominikamann/catchly.app/discussions" target="_blank">GitHub Discussions</a> or via email at <span id="email-address"></span></p>
-            <p style="margin-top: 1rem;">Found a bug or have a feature request? Please report it in our <a href="https://github.com/dominikamann/catchly.app/issues" target="_blank">Issues section</a>.</p>
+            <h2>💬 Kontakt & Support</h2>
+            <p>Wenn du Fragen hast oder Hilfe benötigst, kontaktiere uns gerne hier: <a href="https://github.com/dominikamann/catchly.app/discussions" target="_blank">GitHub Discussions</a> oder per E-Mail an <span id="email-address"></span></p>
+            <p style="margin-top: 1rem;">Fehler gefunden oder Feature-Wunsch? Bitte melde es in unserem <a href="https://github.com/dominikamann/catchly.app/issues" target="_blank">Issues-Bereich</a>.</p>
         </section>
 
         <section class="privacy">
-            <h2>🔒 Privacy & Hosting</h2>
-            <p>This website is hosted via <strong>GitHub Pages</strong> and does not share any personal data with us. Only automatically provided data from GitHub (such as access logs) may be collected.</p>
-            <p>For more details, see our <a href="privacy.html" target="_blank">Privacy Policy</a>.</p>
+            <h2>🔒 Datenschutz & Hosting</h2>
+            <p>Diese Website wird über <strong>GitHub Pages</strong> gehostet und teilt keine persönlichen Daten mit uns. Nur automatisch bereitgestellte Daten von GitHub (wie Zugriffsprotokolle) können erfasst werden.</p>
+            <p>Weitere Details findest du in unserer <a href="privacy-de.html" target="_blank">Datenschutzerklärung</a>.</p>
         </section>
 
         <section class="note">
-            <p><strong>Privacy Note:</strong> Catchly itself does not collect or share any user data through this website. All personal app data remains on your device unless explicitly shared via Apple App Store services.</p>
+            <p><strong>Datenschutz-Hinweis:</strong> Catchly selbst sammelt oder teilt keine Benutzerdaten über diese Website. Alle persönlichen App-Daten verbleiben auf deinem Gerät, es sei denn, sie werden ausdrücklich über Apple App Store-Dienste geteilt.</p>
         </section>
     </main>
     <footer>
-        Made with ❤️ for anglers by anglers<br>
-        <p style="margin-top: 0.5rem;"><a href="impressum-en.html">Imprint</a> | <a href="privacy.html">Privacy Policy</a></p>
-        &copy; 2025 Catchly – All rights reserved.
+        Mit ❤️ gemacht von Anglern für Angler<br>
+        <p style="margin-top: 0.5rem;"><a href="impressum.html">Impressum</a> | <a href="privacy-de.html">Datenschutz</a></p>
+        &copy; 2025 Catchly – Alle Rechte vorbehalten.
     </footer>
 
     <script>

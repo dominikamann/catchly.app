@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,56 @@
         body { font-family: -apple-system, sans-serif; line-height: 1.6; background-color: #f5f8fa; color: #333; padding: 2rem; max-width: 800px; margin: auto; }
         h1, h2 { color: #1c3d5a; }
         a { color: #ff9500; text-decoration: none; }
+        a:hover { text-decoration: underline; }
         footer { text-align: center; font-size: 0.9rem; margin-top: 2rem; color: #666; }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 1rem;
+            background: #1c3d5a;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: #2d5278;
+            text-decoration: none;
+        }
+        .lang-switcher {
+            display: inline-block;
+            margin-left: 1rem;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .lang-switcher:hover {
+            background: #5568d3;
+            text-decoration: none;
+        }
+        .translation-note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #1565c0;
+        }
     </style>
 </head>
 <body>
+    <div>
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="privacy-de.html" class="lang-switcher">🌐 Deutsch</a>
+    </div>
+
+    <div class="translation-note">
+        ℹ️ <strong>Note:</strong> This page has been automatically translated from German. The German version is legally binding.
+    </div>
+    
     <h1>Privacy Policy - Catchly</h1>
 
     <p>Effective Date: 2025</p>
@@ -43,7 +89,7 @@
     <p>Catchly does not share any user data with third parties. The app only uses data necessary for operation via Apple App Store services (e.g., app analytics, crash reporting), as provided by Apple, and does not transfer personal information to us or any other party.</p>
 
     <footer>
-        <p><a href="index.html">Home</a> | <a href="impressum.html">Impressum</a></p>
+        <p><a href="index.html">Home</a> | <a href="impressum-en.html">Imprint</a></p>
         &copy; 2025 Catchly – All rights reserved.
     </footer>
 
