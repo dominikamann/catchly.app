@@ -34,7 +34,7 @@
     <p>You have the right to receive data we process automatically based on your consent or in fulfillment of a contract, in a machine-readable format. Direct transfer to another responsible party is possible if technically feasible.</p>
 
     <h2>Right to Information, Correction, Blocking, Deletion</h2>
-    <p>You have the right to free information about your stored personal data, its origin, recipients, and purpose. You can request correction, blocking, or deletion at any time under applicable law. Feel free to contact us here: <a href="https://github.com/dominikamann/catchly.app/discussions" target="_blank">GitHub Discussions</a>.</p>
+    <p>You have the right to free information about your stored personal data, its origin, recipients, and purpose. You can request correction, blocking, or deletion at any time under applicable law. Feel free to contact us here: <a href="https://github.com/dominikamann/catchly.app/discussions" target="_blank">GitHub Discussions</a> or via email at <span id="email-privacy"></span>.</p>
 
     <h2>Contact Form</h2>
     <p>Data transmitted via the contact form will be stored, including your contact details, to process your request or for follow-up questions. This data will not be shared without your consent. Processing is based exclusively on your consent (Article 6 (1) (a) GDPR). You can revoke consent at any time. Data will remain stored until you request deletion or revoke consent, unless mandatory legal retention periods apply.</p>
@@ -43,7 +43,20 @@
     <p>Catchly does not share any user data with third parties. The app only uses data necessary for operation via Apple App Store services (e.g., app analytics, crash reporting), as provided by Apple, and does not transfer personal information to us or any other party.</p>
 
     <footer>
+        <p><a href="index.html">Home</a> | <a href="impressum.html">Impressum</a></p>
         &copy; 2025 Catchly – All rights reserved.
     </footer>
+
+    <script>
+        // Anti-spam email protection
+        (function() {
+            var user = 'nape.texture_59';
+            var domain = 'icloud.com';
+            var element = document.getElementById('email-privacy');
+            if (element) {
+                element.innerHTML = '<a href="mailto:' + user + '@' + domain + '">' + user + '@' + domain + '</a>';
+            }
+        })();
+    </script>
 </body>
 </html>

@@ -1,53 +1,237 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catchly Support</title>
+    <title>Catchly - Your Personal Fishing Diary</title>
     <style>
-        body { font-family: -apple-system, sans-serif; background-color: #f5f8fa; color: #333; margin: 0; padding: 0; }
-        header { background-color: #1c3d5a; color: white; padding: 2rem; text-align: center; }
-        header h1 { margin: 0 0 0.5rem 0; }
-        main { max-width: 800px; margin: auto; padding: 2rem; }
-        h2 { color: #1c3d5a; margin-top: 2rem; }
-        a { color: #ff9500; text-decoration: none; }
-        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; }
-        section { margin-bottom: 2rem; }
-        .note { font-style: italic; color: #555; margin-top: 1rem; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333; 
+            margin: 0; 
+            padding: 0; 
+        }
+        header { 
+            background-color: rgba(28, 61, 90, 0.95); 
+            color: white; 
+            padding: 3rem 2rem; 
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        header h1 { 
+            margin: 0 0 0.5rem 0; 
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        header p { 
+            margin: 0.5rem 0 0 0; 
+            font-size: 1.2rem; 
+            opacity: 0.9;
+        }
+        .tagline {
+            font-style: italic;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            opacity: 0.8;
+        }
+        main { 
+            max-width: 900px; 
+            margin: 2rem auto; 
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        h2 { 
+            color: #1c3d5a; 
+            margin-top: 2rem;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #ff9500;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        a { 
+            color: #ff9500; 
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer { 
+            text-align: center; 
+            padding: 2rem; 
+            font-size: 0.9rem; 
+            color: white;
+        }
+        section { 
+            margin-bottom: 2.5rem; 
+            line-height: 1.7;
+        }
+        .intro {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .intro p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ff9500;
+        }
+        .feature-card h3 {
+            color: #1c3d5a;
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        .faq-item {
+            background: #f8f9fa;
+            padding: 1.2rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .faq-item strong {
+            color: #1c3d5a;
+            font-size: 1.1rem;
+        }
+        .download-badge {
+            margin-top: 1.5rem;
+            display: inline-block;
+        }
+        .download-badge img {
+            height: 50px;
+        }
+        .note { 
+            font-style: italic; 
+            color: #555; 
+            margin-top: 1rem;
+            background: #fff9e6;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Catchly Support</h1>
-        <p>Your personal fishing diary – help & contact</p>
+        <img src="../icon.png" alt="Catchly Icon" class="header-icon">
+        <h1>🎣 Catchly</h1>
+        <p>Your Personal Fishing Diary</p>
+        <p class="tagline">Your moments. Your spots. Your bites.</p>
     </header>
     <main>
-        <section class="faq">
-            <h2>FAQ</h2>
-            <p><strong>How do I log a catch?</strong><br>
-            Go to "Adventures", select a day, and tap "New Catch".</p>
+        <section class="intro">
+            <h2>About Catchly</h2>
+            <p>Catchly is your digital companion for every fishing trip. Whether you're a casual angler or a passionate fishing enthusiast, Catchly helps you capture every adventure and fish smarter through experience.</p>
+            <div class="download-badge">
+                <a href="https://apps.apple.com/app/catchly/id6739357629" target="_blank">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+            </div>
+        </section>
 
-            <p><strong>How do I delete an adventure?</strong><br>
-            Select the adventure, then tap "Delete".</p>
+        <section>
+            <h2>✨ Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🎣 Log Your Catches</h3>
+                    <p>Record every fish with photos, species, size, weight, and location</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🗺️ Remember Your Spots</h3>
+                    <p>Save your favorite fishing locations and build your personal fishing map</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Track Your Progress</h3>
+                    <p>Analyze your success and learn from every adventure</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📅 Organize Adventures</h3>
+                    <p>Document complete fishing trips with all the details that matter</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Privacy First</h3>
+                    <p>All your data stays on your device – no cloud sync, no data sharing</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📴 Offline Ready</h3>
+                    <p>Completely offline – no internet required</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>❓ FAQ</h2>
+            <div class="faq-item">
+                <p><strong>How do I log a catch?</strong><br>
+                Go to "Adventures", select a day, and tap "New Catch". You can add photos, species, size, weight, and location details.</p>
+            </div>
+            <div class="faq-item">
+                <p><strong>How do I delete an adventure?</strong><br>
+                Select the adventure from your list, then tap "Delete" to remove it permanently.</p>
+            </div>
+            <div class="faq-item">
+                <p><strong>Is my data safe?</strong><br>
+                Yes! All your data stays exclusively on your device. Catchly does not collect, store, or share any personal information.</p>
+            </div>
+            <div class="faq-item">
+                <p><strong>Does Catchly work offline?</strong><br>
+                Absolutely! Catchly is designed to work completely offline, perfect for remote fishing locations.</p>
+            </div>
         </section>
 
         <section class="contact">
-            <h2>Contact</h2>
-            <p>If you have any questions or need assistance, feel free to reach out here: <a href="https://github.com/dominikamann/catchly.app/discussions" target="_blank">GitHub Discussions</a></p>
+            <h2>💬 Contact & Support</h2>
+            <p>If you have any questions or need assistance, feel free to reach out here: <a href="https://github.com/dominikamann/catchly.app/discussions" target="_blank">GitHub Discussions</a> or via email at <span id="email-address"></span></p>
+            <p style="margin-top: 1rem;">Found a bug or have a feature request? Please report it in our <a href="https://github.com/dominikamann/catchly.app/issues" target="_blank">Issues section</a>.</p>
         </section>
 
         <section class="privacy">
-            <h2>Privacy & Hosting Information</h2>
+            <h2>🔒 Privacy & Hosting</h2>
             <p>This website is hosted via <strong>GitHub Pages</strong> and does not share any personal data with us. Only automatically provided data from GitHub (such as access logs) may be collected.</p>
             <p>For more details, see our <a href="privacy.html" target="_blank">Privacy Policy</a>.</p>
         </section>
 
         <section class="note">
-            <p>Note: Catchly itself does not collect or share any user data through this website. All personal app data remains on your device unless explicitly shared via Apple App Store services.</p>
+            <p><strong>Privacy Note:</strong> Catchly itself does not collect or share any user data through this website. All personal app data remains on your device unless explicitly shared via Apple App Store services.</p>
         </section>
     </main>
     <footer>
+        Made with ❤️ for anglers by anglers<br>
+        <p style="margin-top: 0.5rem;"><a href="impressum.html">Impressum</a> | <a href="privacy.html">Privacy Policy</a></p>
         &copy; 2025 Catchly – All rights reserved.
     </footer>
+
+    <script>
+        // Anti-spam email protection
+        (function() {
+            var user = 'nape.texture_59';
+            var domain = 'icloud.com';
+            var element = document.getElementById('email-address');
+            if (element) {
+                element.innerHTML = '<a href="mailto:' + user + '@' + domain + '">' + user + '@' + domain + '</a>';
+            }
+        })();
+    </script>
 </body>
 </html>
