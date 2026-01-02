@@ -67,21 +67,11 @@ header p {
 
 /* Navigation */
 .lang-switcher {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: background 0.2s ease;
-    border: 1px solid rgba(255,255,255,0.3);
+    display: inline;
 }
 
 .lang-switcher:hover {
-    background: rgba(255, 255, 255, 0.3);
+    opacity: 0.8;
 }
 
 .lang-switcher a {
@@ -108,19 +98,6 @@ header p {
 .back-link:hover {
     background: #3498db;
     color: white;
-}
-
-/* Page-specific lang-switcher for content pages */
-.main-content .lang-switcher {
-    position: static;
-    background: #f8f9fa;
-    color: #2c3e50;
-    border: 1px solid #dee2e6;
-}
-
-.main-content .lang-switcher:hover {
-    background: #e9ecef;
-    color: #2c3e50;
 }
 
 /* Main Content */
@@ -368,14 +345,6 @@ footer a:hover {
     
     .faq-item {
         padding: 1.25rem;
-    }
-    
-    .lang-switcher {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 0.85rem;
-        padding: 0.4rem 0.8rem;
     }
     
     .back-link {
