@@ -9,23 +9,41 @@
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
             line-height: 1.6; 
-            background-color: #f5f8fa; 
-            color: #333; 
+            background: linear-gradient(135deg, #0a4d3c 0%, #1a7a5e 50%, #2d9b81 100%);
+            color: #2c3e50; 
             padding: 2rem; 
-            max-width: 800px; 
-            margin: auto; 
+            max-width: 850px; 
+            margin: auto;
+            min-height: 100vh;
         }
-        h1, h2 { color: #1c3d5a; }
-        h1 { border-bottom: 3px solid #ff9500; padding-bottom: 0.5rem; }
-        h2 { margin-top: 2rem; font-size: 1.4rem; }
-        a { color: #ff9500; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        h1, h2 { color: #0a4d3c; }
+        h1 { 
+            border-bottom: 4px solid #2d9b81; 
+            padding-bottom: 0.7rem;
+            font-weight: 800;
+            font-size: 2.5rem;
+        }
+        h2 { 
+            margin-top: 2.5rem; 
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .main-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            margin-top: 2rem;
+        }
+        a { color: #1a7a5e; text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: #2d9b81; }
         .contact-info { 
-            background: #fff; 
-            padding: 1.5rem; 
-            border-radius: 8px; 
-            border-left: 4px solid #1c3d5a;
-            margin: 1.5rem 0;
+            background: linear-gradient(135deg, #e8f5f1 0%, #d4ede5 100%);
+            padding: 2rem; 
+            border-radius: 14px; 
+            border-left: 5px solid #1a7a5e;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .contact-info p { margin: 0.5rem 0; }
         footer { 
@@ -33,44 +51,62 @@
             font-size: 0.9rem; 
             margin-top: 3rem; 
             padding-top: 2rem;
-            border-top: 1px solid #ddd;
-            color: #666; 
+            border-top: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.9);
+        }
+        footer a {
+            color: rgba(255,255,255,0.95);
+            text-decoration: underline;
+            text-decoration-color: rgba(255,255,255,0.4);
+        }
+        footer a:hover {
+            color: white;
+            text-decoration-color: white;
         }
         .back-link {
             display: inline-block;
             margin-bottom: 1.5rem;
-            padding: 0.5rem 1rem;
-            background: #1c3d5a;
+            padding: 0.7rem 1.3rem;
+            background: #1a7a5e;
             color: white;
-            border-radius: 4px;
+            border-radius: 10px;
             text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
         }
         .back-link:hover {
-            background: #2d5278;
-            text-decoration: none;
+            background: #0a4d3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: white;
         }
         .lang-switcher {
             display: inline-block;
             margin-left: 1rem;
-            padding: 0.5rem 1rem;
-            background: #667eea;
+            padding: 0.7rem 1.3rem;
+            background: #2d9b81;
             color: white;
-            border-radius: 4px;
+            border-radius: 10px;
             text-decoration: none;
             font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
         }
         .lang-switcher:hover {
-            background: #5568d3;
-            text-decoration: none;
+            background: #1a7a5e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: white;
         }
         .translation-note {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
+            background: linear-gradient(135deg, #e3f2fd 0%, #d1e9f6 100%);
+            border-left: 5px solid #42a5f5;
+            padding: 1.2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
             color: #1565c0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
     </style>
 </head>
@@ -84,6 +120,7 @@
         ℹ️ <strong>Note:</strong> This page has been automatically translated from German. The German version ("Impressum") is legally binding.
     </div>
     
+    <div class="main-content">
     <h1>Imprint</h1>
     
     <p>Information according to § 5 TMG (German Telemedia Act)</p>
@@ -116,6 +153,7 @@
     <p>The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>.<br>
     You can find our email address in the imprint above.</p>
     <p>We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+    </div>
 
     <footer>
         <p><a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a></p>

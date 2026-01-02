@@ -6,37 +6,89 @@
     <title>Datenschutzerklärung - Catchly</title>
     <link rel="icon" type="image/png" href="icon.png">
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; background-color: #f5f8fa; color: #333; padding: 2rem; max-width: 800px; margin: auto; }
-        h1, h2 { color: #1c3d5a; }
-        a { color: #ff9500; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { text-align: center; font-size: 0.9rem; margin-top: 2rem; color: #666; }
+        body { 
+            font-family: -apple-system, sans-serif; 
+            line-height: 1.6; 
+            background: linear-gradient(135deg, #0a4d3c 0%, #1a7a5e 50%, #2d9b81 100%);
+            color: #2c3e50; 
+            padding: 2rem; 
+            max-width: 850px; 
+            margin: auto;
+            min-height: 100vh;
+        }
+        h1, h2 { color: #0a4d3c; }
+        h1 { 
+            border-bottom: 4px solid #2d9b81; 
+            padding-bottom: 0.7rem;
+            font-weight: 800;
+            font-size: 2.5rem;
+        }
+        h2 { 
+            margin-top: 2.5rem; 
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .main-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            margin-top: 2rem;
+        }
+        a { color: #1a7a5e; text-decoration: none; transition: color 0.2s ease; }
+        a:hover { color: #2d9b81; }
+        ul { margin-left: 1.5rem; }
+        footer { 
+            text-align: center; 
+            font-size: 0.9rem; 
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.9);
+        }
+        footer a {
+            color: rgba(255,255,255,0.95);
+            text-decoration: underline;
+            text-decoration-color: rgba(255,255,255,0.4);
+        }
+        footer a:hover {
+            color: white;
+            text-decoration-color: white;
+        }
         .back-link {
             display: inline-block;
             margin-bottom: 1.5rem;
-            padding: 0.5rem 1rem;
-            background: #1c3d5a;
+            padding: 0.7rem 1.3rem;
+            background: #1a7a5e;
             color: white;
-            border-radius: 4px;
+            border-radius: 10px;
             text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
         }
         .back-link:hover {
-            background: #2d5278;
-            text-decoration: none;
+            background: #0a4d3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: white;
         }
         .lang-switcher {
             display: inline-block;
             margin-left: 1rem;
-            padding: 0.5rem 1rem;
-            background: #667eea;
+            padding: 0.7rem 1.3rem;
+            background: #2d9b81;
             color: white;
-            border-radius: 4px;
+            border-radius: 10px;
             text-decoration: none;
             font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
         }
         .lang-switcher:hover {
-            background: #5568d3;
-            text-decoration: none;
+            background: #1a7a5e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            color: white;
         }
     </style>
 </head>
@@ -46,6 +98,7 @@
         <a href="privacy.html" class="lang-switcher">🌐 English</a>
     </div>
     
+    <div class="main-content">
     <h1>Datenschutzerklärung - Catchly</h1>
 
     <p>Gültig ab: 2025</p>
@@ -84,6 +137,7 @@
     </ul>
     <p>Diese Daten werden ausschließlich zur Bereitstellung aktueller und historischer Wetterinformationen verwendet. OpenWeatherMap verarbeitet diese Daten gemäß ihrer eigenen Datenschutzrichtlinien. Weitere Informationen finden Sie hier: <a href="https://openweather.co.uk/privacy-policy" target="_blank">OpenWeatherMap Datenschutzerklärung</a></p>
     <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung von Wetterdaten für Angler).</p>
+    </div>
 
     <footer>
         <p><a href="index-de.html">Startseite</a> | <a href="impressum.html">Impressum</a></p>

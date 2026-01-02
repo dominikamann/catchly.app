@@ -6,147 +6,222 @@
     <title>Catchly - Dein persönliches Angeltagebuch</title>
     <link rel="icon" type="image/png" href="icon.png">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333; 
+            background: linear-gradient(135deg, #0a4d3c 0%, #1a7a5e 50%, #2d9b81 100%);
+            color: #2c3e50; 
             margin: 0; 
-            padding: 0; 
+            padding: 0;
+            min-height: 100vh;
         }
         header { 
-            background-color: rgba(28, 61, 90, 0.95); 
+            background: linear-gradient(135deg, rgba(10, 77, 60, 0.98) 0%, rgba(26, 122, 94, 0.95) 100%);
             color: white; 
-            padding: 3rem 2rem; 
+            padding: 3.5rem 2rem 3rem; 
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
         }
         .lang-switcher {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            top: 1.2rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
             font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        .lang-switcher:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
         }
         .lang-switcher a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
-        }
-        .lang-switcher a:hover {
-            text-decoration: underline;
+            font-weight: 600;
         }
         .header-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 18px;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            width: 90px;
+            height: 90px;
+            border-radius: 22px;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .header-icon:hover {
+            transform: scale(1.05) rotate(2deg);
         }
         header h1 { 
             margin: 0 0 0.5rem 0; 
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
         }
         header p { 
             margin: 0.5rem 0 0 0; 
-            font-size: 1.2rem; 
-            opacity: 0.9;
+            font-size: 1.3rem; 
+            opacity: 0.95;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
         }
         .tagline {
             font-style: italic;
-            font-size: 1rem;
-            margin-top: 0.5rem;
-            opacity: 0.8;
+            font-size: 1.05rem;
+            margin-top: 0.7rem;
+            opacity: 0.85;
+            font-weight: 300;
         }
         main { 
-            max-width: 900px; 
-            margin: 2rem auto; 
-            padding: 2rem;
+            max-width: 950px; 
+            margin: -2rem auto 3rem; 
+            padding: 2.5rem;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            position: relative;
         }
         h2 { 
-            color: #1c3d5a; 
-            margin-top: 2rem;
-            font-size: 1.8rem;
-            border-bottom: 3px solid #ff9500;
-            padding-bottom: 0.5rem;
+            color: #0a4d3c; 
+            margin-top: 2.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+            border-bottom: 4px solid #2d9b81;
+            padding-bottom: 0.7rem;
             display: inline-block;
         }
         a { 
-            color: #ff9500; 
+            color: #1a7a5e; 
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s ease;
         }
         a:hover {
-            text-decoration: underline;
+            color: #2d9b81;
         }
         footer { 
             text-align: center; 
-            padding: 2rem; 
-            font-size: 0.9rem; 
+            padding: 3rem 2rem; 
+            font-size: 0.95rem; 
+            color: rgba(255,255,255,0.9);
+        }
+        footer a {
+            color: rgba(255,255,255,0.95);
+            text-decoration: underline;
+            text-decoration-color: rgba(255,255,255,0.4);
+        }
+        footer a:hover {
             color: white;
+            text-decoration-color: white;
         }
         section { 
-            margin-bottom: 2.5rem; 
+            margin-bottom: 3rem; 
             line-height: 1.7;
         }
         .intro {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #e8f5f1 0%, #d4ede5 100%);
+            padding: 2.5rem;
+            border-radius: 16px;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(26, 122, 94, 0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .intro p {
-            margin: 0.5rem 0;
-            font-size: 1.1rem;
+            margin: 0.7rem 0;
+            font-size: 1.15rem;
+            color: #2c3e50;
         }
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
         }
         .feature-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #ff9500;
+            background: linear-gradient(135deg, #f8fdfb 0%, #f0f9f6 100%);
+            padding: 2rem;
+            border-radius: 14px;
+            border-left: 5px solid #2d9b81;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(26, 122, 94, 0.15);
+            border-left-color: #1a7a5e;
         }
         .feature-card h3 {
-            color: #1c3d5a;
+            color: #0a4d3c;
             margin-top: 0;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .feature-card p {
+            color: #546e7a;
+            margin-bottom: 0;
         }
         .faq-item {
-            background: #f8f9fa;
-            padding: 1.2rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+            background: linear-gradient(135deg, #f8fdfb 0%, #f0f9f6 100%);
+            padding: 1.5rem;
+            margin: 1.2rem 0;
+            border-radius: 12px;
+            border-left: 5px solid #1a7a5e;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .faq-item:hover {
+            box-shadow: 0 4px 16px rgba(26, 122, 94, 0.12);
+            transform: translateX(4px);
         }
         .faq-item strong {
-            color: #1c3d5a;
-            font-size: 1.1rem;
+            color: #0a4d3c;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        .faq-item p {
+            color: #546e7a;
         }
         .download-badge {
-            margin-top: 1.5rem;
+            margin-top: 1.8rem;
             display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .download-badge:hover {
+            transform: scale(1.05);
         }
         .download-badge img {
-            height: 50px;
+            height: 52px;
         }
         .note { 
             font-style: italic; 
-            color: #555; 
-            margin-top: 1rem;
-            background: #fff9e6;
-            padding: 1rem;
-            border-radius: 6px;
-            border-left: 4px solid #ffc107;
+            color: #5d4e37; 
+            margin-top: 1.5rem;
+            background: linear-gradient(135deg, #fff9e6 0%, #fef5d4 100%);
+            padding: 1.3rem;
+            border-radius: 10px;
+            border-left: 5px solid #d4a574;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
     </style>
 </head>
