@@ -53,8 +53,21 @@
         &copy; 2026 Catchly – Alle Rechte vorbehalten.
     </footer>
 
-    <script>
-        // Anti-spam email protection
+    <script>        // Automatic language detection
+        (function() {
+            const hasManualChoice = sessionStorage.getItem('manualLanguageChoice');
+            if (!hasManualChoice) {
+                const userLang = navigator.language || navigator.userLanguage;
+                const isGerman = userLang.toLowerCase().startsWith('de');
+                if (!isGerman && window.location.pathname.includes('impressum.html') && !window.location.pathname.includes('impressum-en')) {
+                    window.location.href = 'impressum-en.html';
+                }
+            }
+        })();
+        document.querySelector('.lang-switcher a')?.addEventListener('click', function() {
+            sessionStorage.setItem('manualLanguageChoice', 'true');
+        });
+                // Anti-spam email protection
         (function() {
             var user = 'nape.texture_59';
             var domain = 'icloud.com';

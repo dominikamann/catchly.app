@@ -342,6 +342,14 @@ footer a:hover {
         font-size: 1.75rem;
     }
     
+    header p {
+        font-size: 0.95rem;
+    }
+    
+    .tagline {
+        font-size: 0.85rem;
+    }
+    
     main, .main-content {
         padding: 2rem 1rem;
     }
@@ -350,9 +358,36 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
     
+    .feature-card {
+        padding: 1.25rem;
+    }
+    
+    .faq-item {
+        padding: 1.25rem;
+    }
+    
     .lang-switcher {
         position: absolute;
         top: 1rem;
         right: 1rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .back-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .intro {
+        padding: 1.5rem;
+    }
+    
+    .download-badge img {
+        height: 40px;
     }
 }

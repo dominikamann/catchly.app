@@ -98,8 +98,27 @@
         &copy; 2026 Catchly – All rights reserved.
     </footer>
 
-    <script>
-        // Anti-spam email protection
+    <script>        // Automatic language detection (only on first visit)
+        (function() {
+            // Check if user has manually chosen a language
+            const hasManualChoice = sessionStorage.getItem('manualLanguageChoice');
+            
+            if (!hasManualChoice) {
+                const userLang = navigator.language || navigator.userLanguage;
+                const isGerman = userLang.toLowerCase().startsWith('de');
+                
+                // If user's browser is German, redirect to German version
+                if (isGerman && window.location.pathname.includes('index.html') && !window.location.pathname.includes('index-de')) {
+                    window.location.href = 'index-de.html';
+                }
+            }
+        })();
+        
+        // Mark manual language choice when user clicks language switcher
+        document.querySelector('.lang-switcher a')?.addEventListener('click', function() {
+            sessionStorage.setItem('manualLanguageChoice', 'true');
+        });
+                // Anti-spam email protection
         (function() {
             var user = 'nape.texture_59';
             var domain = 'icloud.com';

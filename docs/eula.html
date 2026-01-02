@@ -89,8 +89,21 @@
         &copy; 2026 Catchly – All rights reserved.
     </footer>
 
-    <script>
-        // Anti-spam email protection
+    <script>        // Automatic language detection
+        (function() {
+            const hasManualChoice = sessionStorage.getItem('manualLanguageChoice');
+            if (!hasManualChoice) {
+                const userLang = navigator.language || navigator.userLanguage;
+                const isGerman = userLang.toLowerCase().startsWith('de');
+                if (isGerman && window.location.pathname.includes('eula.html') && !window.location.pathname.includes('eula-')) {
+                    window.location.href = 'eula-de.html';
+                }
+            }
+        })();
+        document.querySelector('.lang-switcher a')?.addEventListener('click', function() {
+            sessionStorage.setItem('manualLanguageChoice', 'true');
+        });
+                // Anti-spam email protection
         (function() {
             var user = 'nape.texture_59';
             var domain = 'icloud.com';
