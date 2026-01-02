@@ -279,6 +279,24 @@ section {
     margin: 2rem 0;
 }
 
+/* Family Image Section */
+.family-image-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.family-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
 .contact-info p { 
     margin: 0.5rem 0; 
 }
