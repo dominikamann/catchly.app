@@ -99,6 +99,10 @@ header p {
     text-decoration: none;
     transition: background 0.2s ease;
     font-weight: 500;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 10;
 }
 
 .back-link:hover {
@@ -375,8 +379,11 @@ footer a:hover {
     }
     
     .back-link {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
     }
     
     h2 {
